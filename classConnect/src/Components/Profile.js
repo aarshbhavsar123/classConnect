@@ -19,7 +19,7 @@ export default function Profile() {
   useEffect(() => {
     // Fetch data from the backend with the username as a query parameter
     axios
-      .get(`http://localhost:3002/profiles/${profileId}`)
+      .get(`https://classconnect-cwrt.onrender.com/profiles/${profileId}`)
       .then((response) => {
         setProfile(response.data);
         setcheckin(response.data.isInstructor);
@@ -53,7 +53,7 @@ export default function Profile() {
               <>
                 {profile.image ? (
                   <img
-                    src={`http://localhost:3002/uploads/${profile.image}`}
+                    src={`https://classconnect-cwrt.onrender.com/uploads/${profile.image}`}
                     alt="Profile Image"
                     onClick={handleImageClick}
                     className={isImageEnlarged ? "enlarged-image" : ""}

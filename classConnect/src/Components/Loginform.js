@@ -20,7 +20,7 @@ export default function LoginForm({ setUsername, setProfileId }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3002/api/login', {
+      const response = await axios.post('https://classconnect-cwrt.onrender.com/api/login', {
         username: usernameInput,
         password
       });

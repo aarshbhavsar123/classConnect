@@ -16,7 +16,7 @@ export default function Announcement({ classId, senderName }) {
   const fetchAnnouncements = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3002/classes/${classId}/announcements`
+        `https://classconnect-cwrt.onrender.com/classes/${classId}/announcements`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch announcements");
@@ -30,7 +30,7 @@ export default function Announcement({ classId, senderName }) {
 
   const downloadFile = (file) => {
     const downloadLink = document.createElement("a");
-    downloadLink.href = `http://localhost:3002/uploads/${file}`;
+    downloadLink.href = `https://classconnect-cwrt.onrender.com/uploads/${file}`;
     downloadLink.download = file;
     document.body.appendChild(downloadLink);
     downloadLink.click();
@@ -56,7 +56,7 @@ export default function Announcement({ classId, senderName }) {
   const handleAddMessage = async (announcementId) => {
     try {
       const response = await fetch(
-        `http://localhost:3002/classes/${classId}/announcements/${announcementId}/add-message`,
+        `https://classconnect-cwrt.onrender.com/classes/${classId}/announcements/${announcementId}/add-message`,
         {
           method: "POST",
           headers: {

@@ -16,7 +16,7 @@ function ImageUpload() {
     formData.append("image", image);
 
     try {
-      await axios.post(`http://localhost:3002/upload-image/${username}`, formData, {
+      await axios.post(`https://classconnect-cwrt.onrender.com/upload-image/${username}`, formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       console.log('Image uploaded successfully');

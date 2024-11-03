@@ -9,7 +9,7 @@ const SeeStudents = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get(`http://localhost:3002/classes/${classId}/students`);
+        const response = await axios.get(`https://classconnect-cwrt.onrender.com/classes/${classId}/students`);
         setStudents(response.data);
       } catch (error) {
         console.error('Error fetching students:', error);

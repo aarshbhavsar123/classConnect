@@ -43,7 +43,7 @@ const CreateCard = ({
   const fetchUserProfile = async (profileId) => {
     try {
       const response = await fetch(
-        `http://localhost:3002/profiles/${profileId}`
+        `https://classconnect-cwrt.onrender.com/profiles/${profileId}`
       );
       const data = await response.json();
       setUserProfile(data);
@@ -58,7 +58,7 @@ const CreateCard = ({
 
   const handleDeleteClass = async () => {
     try {
-      const response = await fetch(`http://localhost:3002/classes/${classId}`, {
+      const response = await fetch(`https://classconnect-cwrt.onrender.com/classes/${classId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const CreateCard = ({
   };
   const handleUnenroll = async () => {
     try {
-      const response = await fetch("http://localhost:3002/unenroll-class", {
+      const response = await fetch("https://classconnect-cwrt.onrender.com/unenroll-class", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +153,7 @@ const CreateCard = ({
         </div>
         {userProfile && userProfile.image ? (
           <img
-            src={`http://localhost:3002/uploads/${userProfile.image}`}
+            src={`https://classconnect-cwrt.onrender.com/uploads/${userProfile.image}`}
             alt="Default Student Image"
             className="joined__avatar"
           />

@@ -33,7 +33,7 @@ export default function Forgotpassword() {
     if (stage == 0) {
       try {
         setError(null);
-        const response = await axios.post('http://localhost:3002/api/send-otp', { username });
+        const response = await axios.post('https://classconnect-cwrt.onrender.com/api/send-otp', { username });
         const { message, otp } = response.data;
         
         if (message) {
@@ -51,7 +51,7 @@ export default function Forgotpassword() {
     }else if (stage === 1) {
       try {
         setError(null);
-        const response = await axios.post('http://localhost:3002/api/verify-otp', { otp, mailOTP: mailOTP.toString()});
+        const response = await axios.post('https://classconnect-cwrt.onrender.com/api/verify-otp', { otp, mailOTP: mailOTP.toString()});
         if (response.data.success) {
           setStage(2);
         } else {
@@ -68,7 +68,7 @@ export default function Forgotpassword() {
 
       try {
         setError(null);
-        const response = await axios.post('http://localhost:3002/api/update-password', {
+        const response = await axios.post('https://classconnect-cwrt.onrender.com/api/update-password', {
           username,
           newPassword
         });

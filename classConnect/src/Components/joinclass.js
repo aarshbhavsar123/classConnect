@@ -15,7 +15,7 @@ const JoinClassPage = ({username}) => {
 
   const handleJoinClass = async () => {
     try {
-      const response = await axios.post('http://localhost:3002/join-class', { classcode, profileId });
+      const response = await axios.post('https://classconnect-cwrt.onrender.com/join-class', { classcode, profileId });
       setSuccessMessage(response.data.message);
       setErrorMessage('');
       alert("You are added to the class successfully");

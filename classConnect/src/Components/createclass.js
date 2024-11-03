@@ -33,7 +33,7 @@ function CreateClassForm({ username }) {
     e.preventDefault();
     try {  
       // Make a POST request to create a new class
-      const response = await axios.post('http://localhost:3002/classes', {
+      const response = await axios.post('https://classconnect-cwrt.onrender.com/classes', {
         name,
         OwnerUserID: profileId,
         bio,

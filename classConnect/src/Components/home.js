@@ -17,7 +17,7 @@ function Home({setuserclassId}) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3002/show-classes/${profileId}`);
+        const response = await axios.get(`https://classconnect-cwrt.onrender.com/show-classes/${profileId}`);
         setProfile(response.data.profile); // Assuming response.data.profile is an object containing profile information
         setCreatedClasses(response.data.classes); // Assuming response.data.classes is an array of classes
       } catch (error) {

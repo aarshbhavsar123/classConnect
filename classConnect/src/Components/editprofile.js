@@ -18,7 +18,7 @@ export default function EditProfile() {
   const [image, setImage] = useState("");
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/profiles/${profileId}`)
+      .get(`https://classconnect-cwrt.onrender.com/profiles/${profileId}`)
       .then((response) => {
         const { name, email, bio } = response.data;
         setName(name);
@@ -37,7 +37,7 @@ export default function EditProfile() {
     event.preventDefault();
     setIsUpdating(true); // Set updating flag to true while request is in progress
     try {
-      await axios.put(`http://localhost:3002/editprofile/${profileId}`, {
+      await axios.put(`https://classconnect-cwrt.onrender.com/editprofile/${profileId}`, {
         name,
         email, // Include email in the request body for updating if needed
         bio,
@@ -61,7 +61,7 @@ export default function EditProfile() {
 
     try {
       await axios.post(
-        `http://localhost:3002/upload-image/${email}`,
+        `https://classconnect-cwrt.onrender.com/upload-image/${email}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -76,7 +76,7 @@ export default function EditProfile() {
   };
   const removeImage = async () => {
       try{
-        await axios.post(`http://localhost:3002/remove-image/${email}`);
+        await axios.post(`https://classconnect-cwrt.onrender.com/remove-image/${email}`);
         alert("Image Removed Successfully");
       }
       catch (error)

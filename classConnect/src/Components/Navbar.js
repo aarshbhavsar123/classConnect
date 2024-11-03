@@ -42,7 +42,7 @@ function ResponsiveAppBar({ username,profileId }) {
   const fetchUserProfile = async (profileId) => {
     try {
       // Assuming you have an API endpoint to fetch user profile data
-      const response = await fetch(`http://localhost:3002/profiles/${profileId}`);
+      const response = await fetch(`https://classconnect-cwrt.onrender.com/profiles/${profileId}`);
       const data = await response.json();
       setcheckin(data.isInstructor); // Update checkin state with fetched data
       setUserProfile(data); // Update userProfile state with fetched data
@@ -218,7 +218,7 @@ function ResponsiveAppBar({ username,profileId }) {
                 {userProfile && userProfile.image ? (
                   <Avatar
                     alt="User Avatar"
-                    src={`http://localhost:3002/uploads/${userProfile.image}`}
+                    src={`https://classconnect-cwrt.onrender.com/uploads/${userProfile.image}`}
                     sx={{
                       width: 40,
                       height: 40,

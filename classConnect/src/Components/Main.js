@@ -23,7 +23,7 @@ export default function Main({ username }) {
   useEffect(() => {
     const fetchProfileDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/profiles/${profileId}`);
+        const response = await fetch(`https://classconnect-cwrt.onrender.com/profiles/${profileId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch profile details');
         }
@@ -39,7 +39,7 @@ export default function Main({ username }) {
   useEffect(() => {
     const fetchClassDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3002/classesbyId/${classId}`);
+        const response = await fetch(`https://classconnect-cwrt.onrender.com/classesbyId/${classId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch class details');
         }
@@ -75,7 +75,7 @@ export default function Main({ username }) {
       }
   
       // Send the data to the server
-      const response = await fetch(`http://localhost:3002/classes/${classId}/add-announcements`, {
+      const response = await fetch(`https://classconnect-cwrt.onrender.com/classes/${classId}/add-announcements`, {
         method: 'POST',
         body: formData,
       });

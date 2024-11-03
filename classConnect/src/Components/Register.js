@@ -23,7 +23,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3002/api/register', {
+      const response = await axios.post('https://classconnect-cwrt.onrender.com/api/register', {
         name,
         username,
         password,
