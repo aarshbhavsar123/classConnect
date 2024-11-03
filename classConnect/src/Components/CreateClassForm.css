@@ -1,0 +1,100 @@
+.create-class-form-container {
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in; /* Fade in animation */
+    width: 400px; /* Set a fixed width */
+    margin: 50px auto 0; /* Center align horizontally and add space at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .supportus{
+    height: 80vh;
+  }
+
+  .formhead{
+    margin-bottom: 10px;
+  }
+
+  @media(max-width: 400px)
+  {
+    .create-class-form-container{
+      width: 85vw;
+    }
+  }
+
+  .error-message {
+    color: red;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .create-class-form-container form {
+    width: 100%; /* Ensure the form takes full width */
+  }
+  
+  .create-class-form-container form div {
+    margin-bottom: 10px; /* Add some vertical spacing between form elements */
+  }
+  
+  .create-class-form-container form label {
+    margin-right: 10px; /* Add some spacing between label and input */
+  }
+  
+  .create-class-form-container form textarea,
+  .create-class-form-container form input[type="text"] {
+    width: 100%; /* Ensure inputs take full width */
+  }
+  
+  .create-class-form-container form button {
+    width: 100%; /* Ensure the button takes full width */
+  }
+  
+  /* CreateClassForm.css */
+
+/* Add styles for input elements */
+.inputcreate {
+  width: 100%; 
+  height: 40px; 
+  padding: 8px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
+}
+
+
+.createclassbtn {
+  width: 100%; 
+  height: 40px; 
+  padding: 10px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.headings {
+  font-weight: 500; 
+}
+
+.bio-textarea {
+  width: 100%; 
+  height: 150px; 
+  padding: 8px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.foo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 89vh;
+}
+.footer {
+  position: fixed;
+  width: 100vw;
+  background: #3586ff;
+  min-height: 20px;
+  padding: 5px 5px;
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
